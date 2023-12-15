@@ -21,16 +21,12 @@ export const defaultLang = 'uk'
   
 export const ui = {
     en: {
-      'nav.home': 'Main Page',
-      'nav.сontacts': 'My Contacts',
-      'nav.twitter': 'Twitter',
+      
     },
     ru: {
-      'nav.home': 'Главная страница',
-      'nav.contacts': 'Мои Контакты',
+    
     },
     uk: {
-      'nav.home': 'Головна сторінка',
-      'nav.contacts': 'Мої Контакти',
-    },
-  } as const;
+      
+    }
+  } 

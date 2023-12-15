@@ -1,29 +1,17 @@
-import { defineCollection, reference, z } from 'astro:content';
+import { z, defineCollection } from 'astro:content';
 
-const blog = defineCollection({
-  type: 'content',
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    author: reference('authors'),
-    slug: z.string(),
+// Typescript for the Blog Content
+const blogCollection = defineCollection({ type: 'content', 
+  schema: ({ image }) => z.object({
+    title: z.string().max(60, "For optimze SEO, please provide a title with 60 characters or less"),
     date: z.date(),
-    relatedPosts: z.array(reference('blog')),
-    language: z.enum(['uk', 'en', 'ru']),
-    tags: z.array(z.string()),
-    image: z.object({
-      src: z.string(),
-      alt: z.string(),
-    }),
-  })
-});
+    excerpt: z.string().max(160, "For optimze SEO, please provide a excerpt/description with 160 characters or less"),
+    author: z.enum(['Hrihorii Ilin']),
+    categories: z.array(z.string()),
+    image: image(),
+    imageAlt: z.string()
+  }), });
 
-const authors = defineCollection({
-  type: 'data',
-  schema: z.object({
-    name: z.string(),
-    portfolio: z.string().url(),
-  })
-});
-
-export const collections = { blog, authors };
+export const collections = {
+  'blog': blogCollection,
+};

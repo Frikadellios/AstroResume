@@ -22,6 +22,12 @@
     "allowSyntheticDefaultImports": true,
     "verbatimModuleSyntax": true,
     "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
