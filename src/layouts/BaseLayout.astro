@@ -1,8 +1,8 @@
 ---
 // Astro Imports - Components & Globas
-import HeadSEO from '@/components/layout/HeadSEO.astro'
-import Footer from '@/components/layout/Footer.astro'
-import Navbar from '@/components/layout/Navbar.astro'
+import HeadSEO from '../components/layout/HeadSEO.astro'
+import Footer from '../components/layout/Footer.astro'
+import Navbar from '../components/layout/Navbar.astro'
 import { type CollectionEntry } from 'astro:content'
 
 // Props imterface
@@ -32,11 +32,11 @@ const lang = getLangFromUrl(Astro.url)
       post={post}
     />
   </head>
-  <body class="min-h-screen bg-background text-foreground">
+  <body class="min-h-screen bg-background font-sans antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-T7CDGRPZ"
+        src="https://www.googletagmanager.com/gtm/js?id=GTM-TWDLLCZJ"
         height="0"
         width="0"
         style="display:none;visibility:hidden"></iframe></noscript
