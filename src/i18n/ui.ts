@@ -1,24 +1,25 @@
 export const languages = {
-    en: 'English',
-    ru: 'Русский',
-    uk: 'Українська',
-  };
-  
-  export const defaultLang = 'uk';
-
-export const routes = {
-    en: {
-        'contacts': 'My Contacts',
-    },
-    ru: {
-        'contacts': 'Мои Контакты',
-    },
-    uk: {
-        'contacts': 'Мої Контакти',
-    },
+  en: {
+    name: 'English',
+    route: '/en/',
+    icon: 'en',
+  },
+  uk: {
+    name: 'Українська',
+    route: '/uk/',
+    icon: 'uk',
+  },
+  ru: {
+    name: 'Русский',
+    route: '/ru/',
+    icon: 'ru',
+  },
 }
+
+export const defaultLang = 'uk'
+
   
-  export const ui = {
+export const ui = {
     en: {
       'nav.home': 'Main Page',
       'nav.сontacts': 'My Contacts',
