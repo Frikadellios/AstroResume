@@ -8,7 +8,7 @@ excerpt: My first blog post about development and startup
 categories:
     - development
     - startup
-image: ../../../assets/color-logo.jpeg
+image: ../../../assets/color-logo.jpg
 imageAlt:  My first blog post about development and startup
 
 ---

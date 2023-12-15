@@ -8,7 +8,7 @@ excerpt: Мой первый пост про разработку и мой ст
 categories:
     - development
     - sturtup
-image: ../../../assets/color-logo.jpeg
+image: ../../../assets/color-logo.jpg
 imageAlt: Мой первый пост про разработку и мой стартап
 
 ---

@@ -8,7 +8,7 @@ excerpt: Мій перший пост стосовно розробки та с�
 categories:
     - development
     - sturtup
-image: ../../../assets/color-logo.jpeg
+image: ../../../assets/color-logo.jpg
 imageAlt:  Мій перший пост стосовно розробки та стартапу
 
 ---
