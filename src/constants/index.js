@@ -695,8 +695,8 @@ export const contacts = [
       en: 'Cellphone',
       ru: 'Телефон',
     },
-    link: 'tel:+38-097-114-70-70',
-    linkLabel: '+38 097 114 70 70',
+    link: 'tel:+38-096-463-05-24',
+    linkLabel: '+38 096 463 05 24',
   },
   {
     label: {
@@ -731,7 +731,7 @@ export const contacts = [
       en: 'Telegram',
       ru: 'Telegram',
     },
-    link: 'https://t.me/Aqua_like',
+    link: 'https://t.me/Frikadellios',
     linkLabel: '@',
   },
   {
@@ -740,7 +740,7 @@ export const contacts = [
       en: 'Viber',
       ru: 'Viber',
     },
-    link: 'viber://chat?number=%2B380971147070  rel="nofollow"',
+    link: 'viber://chat?number=%2B380964630524  rel="nofollow"',
     linkLabel: 'Viber',
   },
   {
@@ -749,7 +749,7 @@ export const contacts = [
       en: 'WhatsApp',
       ru: 'WhatsApp',
     },
-    link: 'https://wa.me/380971147070',
+    link: 'https://wa.me/380964630524',
     linkLabel: '@',
   },
 ]
