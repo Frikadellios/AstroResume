@@ -21,6 +21,7 @@
     "downlevelIteration": true,
     "allowSyntheticDefaultImports": true,
     "verbatimModuleSyntax": true,
+    "strictNullChecks": true,
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"

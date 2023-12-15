@@ -4,7 +4,7 @@ export const languages = {
     uk: 'Українська',
   };
   
-export const showDefaultLang = false;
+  export const defaultLang = 'uk';
 
 export const routes = {
     en: {
