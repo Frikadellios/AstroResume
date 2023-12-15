@@ -1,0 +1,6 @@
+{
+	"runtime": "nodejs20.x",
+	"handler": "workspaces/AstroResume/dist/entry.mjs",
+	"launcherType": "Nodejs",
+	"supportsResponseStreaming": true
+}

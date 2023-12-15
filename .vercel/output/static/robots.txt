@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.devopsick.com/sitemap-0.xml
+Host: devopsick.com
