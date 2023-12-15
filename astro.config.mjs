@@ -22,5 +22,12 @@ export default defineConfig({
     host: 'devopsick.com'
   })],
   output: "server",
-  adapter: vercel()
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+    speedInsights: {
+      enabled: true,
+    },
+  }),
 });
