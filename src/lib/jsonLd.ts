@@ -17,14 +17,14 @@ export default function jsonLDGenerator({
   "image": "${post.data.image.src}",  
   "author": {
     "@type": "Person",
-    "name": "AquaPumpers"
+    "name": "Hrihorii Ilin"
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "AquaPumpers",
+    "name": "DevOpSick",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://www.aquapumpers.com/favicon.ico"
+      "url": "https://www.devopsick.com/favicon.ico"
     }
   },
   "datePublished": ${post.data.date}
@@ -35,18 +35,18 @@ export default function jsonLDGenerator({
       {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "AquaPumpers",
-        "image": "/og-image.png",
+        "name": "DevOpSick",
+        "image": "/og-image.jpg",
         "@id": "",
-        "url": "https://www.aquapumpers.com",
-        "telephone": "+380971147070",
+        "url": "https://www.devopsick.com",
+        "telephone": "+380964630524",
         "priceRange": "40$+",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Велика Окружна дорога 100",
-          "addressLocality": "Київ, Київська область",
-          "postalCode": "03150",
-          "addressCountry": "Україна"
+          "streetAddress": "Bezvirnitskaya 29b street",
+          "addressLocality": "Poltava",
+          "postalCode": "36015",
+          "addressCountry": "Ukraine"
         }  
       }
       </script>`
