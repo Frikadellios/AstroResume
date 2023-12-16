@@ -18,15 +18,8 @@ export const languages = {
 
 export const defaultLang = 'uk'
 
-  
 export const ui = {
-    en: {
-      
-    },
-    ru: {
-    
-    },
-    uk: {
-      
-    }
-  } 
+  en: {},
+  ru: {},
+  uk: {},
+}

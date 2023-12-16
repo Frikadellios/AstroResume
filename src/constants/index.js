@@ -635,55 +635,54 @@ export const testimonials = [
     review: {
       uk: 'Adrian es un excelente entrenador. Es muy profesional y tiene muchos conocimientos sobre cómo hacer que sus clientes alcancen sus objetivos. Lo recomiendo 100%.',
       en: 'Adrian is an excellent coach. He is highly professional and possesses extensive knowledge on how to help his clients achieve their goals. I wholeheartedly recommend him 100%.',
-      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊'
+      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊',
     },
-    image: testimonial
+    image: testimonial,
   },
   {
     name: 'Pablo RR',
     review: {
       uk: 'Adrián es un gran profesor, me ha enseñado mucho en estos meses que llevamos. Hace un entrenamiento muy enfocado en ti y te ayuda a cumplir tus objetivos. Es muy flexible y siempre está dispuesto a ayudar🙃. Totalmente recomendable💪🏻💪🏻…',
       en: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊',
-      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊'
+      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊',
     },
-    image: testimonial
+    image: testimonial,
   },
   {
     name: 'Rogelio',
     review: {
       uk: 'Muy buen entrenador, clases excelentes,  se lo recomiendo a todos los q quieran estar en forma y quieran aprender a defenderse',
       en: 'A very good trainer, excellent classes, I recommend him to everyone who wants to get in shape and learn self-defense.',
-      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊'
+      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊',
     },
-    image: testimonial
+    image: testimonial,
   },
   {
     name: 'Rachel Castellanos',
     review: {
       uk: 'Mi entrenador muchas gracias por los cambios que estoy viendo diariamente. Y ante todo por las ganas que me das para seguir esforzándome. 💪💪💪…',
       en: 'Thank you so much to my trainer for the changes I see every day. And above all, for the motivation you give me to keep pushing myself. 💪💪💪...',
-      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊'
+      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊',
     },
-    image: testimonial
+    image: testimonial,
   },
   {
     name: 'Rodrigo Manzanares',
     review: {
       uk: 'El mejor entrenador!! Sabe mucho y se aprende mucho con Adrian. Muy recomendable',
       en: 'The best coach!! Adrian knows a lot, and you learn a great deal from him. Highly recommended.',
-      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊'
+      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊',
     },
-    image: testimonial
+    image: testimonial,
   },
   {
     name: 'Javier Escribano',
     review: {
       uk: 'Muy buen entrenador y muy buenas clases con un seguimiento personalizado excelente lo recomiendo totalmente',
       en: 'A very good coach with excellent personalized guidance in his classes. I highly recommend him.',
-      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊'
+      ru: 'Adrián is a great teacher; he has taught me a lot during the months we&apos;ve been working together. His training is highly personalized and helps you achieve your goals. He is very flexible and always ready to assist. Highly recommended! 💪🏻💪🏻😊',
     },
-    image: testimonial
-
+    image: testimonial,
   },
 ]
 
@@ -754,4 +753,34 @@ export const contacts = [
   },
 ]
 
-export const horas = ['08:00 AM', '08:30 AM', '09:00 AM', '09:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM', '12:30 PM', '01:00 PM', '01:30 PM','02:00 PM', '02:30 PM', '03:00 PM', '03:30 PM', '04:00 PM', '04:30 PM', '05:00 PM', '05:30 PM', '06:00 PM', '06:30 PM', '07:00 PM', '07:30 PM', '08:00 PM', '08:30 PM', '09:00 PM', '09:30 PM', '10:00 PM']
+export const horas = [
+  '08:00 AM',
+  '08:30 AM',
+  '09:00 AM',
+  '09:30 AM',
+  '10:00 AM',
+  '10:30 AM',
+  '11:00 AM',
+  '11:30 AM',
+  '12:00 PM',
+  '12:30 PM',
+  '01:00 PM',
+  '01:30 PM',
+  '02:00 PM',
+  '02:30 PM',
+  '03:00 PM',
+  '03:30 PM',
+  '04:00 PM',
+  '04:30 PM',
+  '05:00 PM',
+  '05:30 PM',
+  '06:00 PM',
+  '06:30 PM',
+  '07:00 PM',
+  '07:30 PM',
+  '08:00 PM',
+  '08:30 PM',
+  '09:00 PM',
+  '09:30 PM',
+  '10:00 PM',
+]

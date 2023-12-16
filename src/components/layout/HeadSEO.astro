@@ -72,11 +72,11 @@ if (Astro.props.ogImage === undefined) {
 <meta
   name="designer"
   content="Hrihorii 'DevOpSick' Ilin, devopsick@pm.me, https://www.devopsick.com"
-  />
+/>
 <meta
   name="owner"
   content="Hrihorii 'DevOpSick' Ilin, devopsick@pm.me, https://www.devopsick.com"
-  />
+/>
 <link rel="canonical" href={canonicalURL} />
 <meta name="title" content={title} />
 <meta name="description" content={description} />
@@ -135,11 +135,16 @@ if (Astro.props.ogImage === undefined) {
 
 <!-- Google Tag Manager -->
 <script>
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-TWDLLCZJ');
+  ;(function (w, d, s, l, i) {
+    w[l] = w[l] || []
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != 'dataLayer' ? '&l=' + l : ''
+    j.async = true
+    j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+    f.parentNode.insertBefore(j, f)
+  })(window, document, 'script', 'dataLayer', 'GTM-TWDLLCZJ')
 </script>
 
 <!-- End Google Tag Manager -->

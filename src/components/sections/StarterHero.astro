@@ -1,0 +1,60 @@
+---
+import Button from '../ui/button.astro'
+---
+
+<section class="bg-trancperent w-full px-6 pb-12">
+  <div class="mx-auto max-w-7xl">
+    <div class="relative" id="home">
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 grid grid-cols-2 -space-x-52 opacity-40 dark:opacity-20"
+      >
+        <div
+          class="h-56 animate-pulse bg-gradient-to-br from-brand-700 to-purple-400 blur-[106px] dark:from-blue-700"
+        >
+        </div>
+        <div
+          class="dark:to-to-sky-300 h-32 animate-pulse bg-gradient-to-r from-cyan-400 to-red-600 blur-[106px]"
+        >
+        </div>
+      </div>
+      <!-- Main Hero Content -->
+      <div
+        class="reletative container mx-auto mt-px max-w-lg px-4 py-32 text-left md:max-w-none md:text-center"
+      >
+        <h1
+          class="text-color text-left text-5xl font-extrabold leading-10 tracking-tight text-gray-900 sm:leading-none md:text-center md:text-6xl lg:text-7xl"
+        >
+          <span class="inline md:block">Start Crafting Your</span>
+          <span
+            class="relative mt-2 bg-gradient-to-br from-indigo-600 to-indigo-500 bg-clip-text text-transparent md:inline-block"
+            >Next Great Idea</span>
+        </h1>
+        <div
+          class="mx-auto mt-5 text-gray-500 md:mt-12 md:max-w-lg md:text-center lg:text-lg"
+        >
+          Simplifying the creation of landing pages, blog pages, application
+          pages and so much more!
+        </div>
+        <div class="mt-12 flex flex-col items-center text-center">
+          <span class="relative inline-flex w-full md:w-auto">
+            <div
+              class="absolute -inset-0.5 -z-10 animate-pulse rounded-xl bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] blur-xl group-hover:inset-10 group-hover:opacity-100"
+            >
+            </div>
+            <div
+              class="svg-wrapper duration-400 transform transition-all group-hover:translate-x-5 group-hover:rotate-45"
+            >
+            </div>
+            <Button style="inverted">Purchase Now</Button>
+            <span
+              class="absolute right-0 top-0 -mr-6 -mt-3 animate-pulse rounded-full bg-green-400 px-2 py-1 text-xs font-medium leading-tight text-white"
+              >only $15/mo</span
+            >
+          </span>
+        </div>
+      </div>
+      <!-- End Main Hero Content -->
+    </div>
+  </div>
+</section>

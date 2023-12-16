@@ -1,7 +1,7 @@
-import * as z from "zod"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { Button } from "@/components/ui/button"
+import * as z from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import { Button } from '@/components/ui/button'
 import {
   Form,
   FormControl,
@@ -9,25 +9,25 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
+} from '@/components/ui/form'
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from '@/components/ui/select'
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
-import { Input } from "@/components/ui/input"
-import { horas, services } from "@/constants"
-import { cn } from "@/lib/utils"
-import { Calendar } from "@/components/ui/calendar"
-import { format } from "date-fns"
-import { CalendarIcon } from "lucide-react"
+} from '@/components/ui/popover'
+import { Input } from '@/components/ui/input'
+import { horas, services } from '@/constants'
+import { cn } from '@/lib/utils'
+import { Calendar } from '@/components/ui/calendar'
+import { format } from 'date-fns'
+import { CalendarIcon } from 'lucide-react'
 import { useToast } from '../../components/ui/use-toast'
 
 // Translation Imports
@@ -35,75 +35,76 @@ import { useTranslations } from '../../i18n/utils'
 
 const formSchema = z.object({
   username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+    message: 'Username must be at least 2 characters.',
   }),
   address: z.string().min(2, {
-    message: "Address is required.",
+    message: 'Address is required.',
   }),
   time: z.string(),
   services: z.string(),
   message: z.string(),
   date: z.date({
-    required_error: "A date is required.",
+    required_error: 'A date is required.',
   }),
   phone: z.string().min(1, {
-    message: "Phone is required.",
+    message: 'Phone is required.',
   }),
 })
 
-
 export function BookingForm({ lang }: { lang: 'uk' | 'en' | 'ru' }) {
-
   const t = useTranslations(lang)
   const { toast } = useToast()
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      username: "",
-      address: "",
-      time: "",
-      services: "",
+      username: '',
+      address: '',
+      time: '',
+      services: '',
       date: new Date(),
       message: '',
-      phone: ''
+      phone: '',
     },
   })
-
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     const res = await fetch('/api/sendEmail.json', {
       method: 'POST',
       headers: {
-        "Content-Type": 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        values
-      })
+        values,
+      }),
     })
 
     if (res.status === 200) {
       toast({
         duration: 5000,
         title: t('form-toast-ok'),
-        description: `${format(values.date, "PPP")} / ${values.time} / ${t('form-toast-ok-description')}`,
+        description: `${format(values.date, 'PPP')} / ${values.time} / ${t(
+          'form-toast-ok-description',
+        )}`,
       })
       form.reset()
     } else {
       toast({
         duration: 5000,
-        variant: "destructive",
+        variant: 'destructive',
         title: t('form-toast-wrong'),
         description: t('form-toast-wrong-description'),
       })
     }
-
   }
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <fieldset disabled={form.formState.isSubmitting} className="group space-y-3 p-5">
-          <div className="flex items-center justify-between md:gap-10 gap-3 w-full flex-col md:flex-row">
+        <fieldset
+          disabled={form.formState.isSubmitting}
+          className="group space-y-3 p-5"
+        >
+          <div className="flex w-full flex-col items-center justify-between gap-3 md:flex-row md:gap-10">
             <FormField
               control={form.control}
               name="username"
@@ -111,7 +112,11 @@ export function BookingForm({ lang }: { lang: 'uk' | 'en' | 'ru' }) {
                 <FormItem>
                   <FormLabel>{t('form-name')}</FormLabel>
                   <FormControl>
-                    <Input placeholder={t('form-name-placeholder')} {...field} className="w-[300px]" />
+                    <Input
+                      placeholder={t('form-name-placeholder')}
+                      {...field}
+                      className="w-[300px]"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -123,15 +128,26 @@ export function BookingForm({ lang }: { lang: 'uk' | 'en' | 'ru' }) {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t('form-time')}</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
                     <FormControl>
-                      <SelectTrigger className={`w-[300px] ${field.value === "" ? 'text-muted-foreground' : 'text-white'}`}>
+                      <SelectTrigger
+                        className={`w-[300px] ${
+                          field.value === ''
+                            ? 'text-muted-foreground'
+                            : 'text-white'
+                        }`}
+                      >
                         <SelectValue placeholder={t('form-time-placeholder')} />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
                       {horas.map((h) => (
-                        <SelectItem key={h} value={h}>{h}</SelectItem>
+                        <SelectItem key={h} value={h}>
+                          {h}
+                        </SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
@@ -140,22 +156,35 @@ export function BookingForm({ lang }: { lang: 'uk' | 'en' | 'ru' }) {
               )}
             />
           </div>
-          <div className="flex items-center justify-between md:gap-10 gap-3 w-full flex-col md:flex-row">
+          <div className="flex w-full flex-col items-center justify-between gap-3 md:flex-row md:gap-10">
             <FormField
               control={form.control}
               name="services"
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>{t('form-services')}</FormLabel>
-                  <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
                     <FormControl>
-                      <SelectTrigger className={`w-[300px] ${field.value === "" ? 'text-muted-foreground' : 'text-white'}`}>
-                        <SelectValue placeholder={t('form-services-placeholder')} />
+                      <SelectTrigger
+                        className={`w-[300px] ${
+                          field.value === ''
+                            ? 'text-muted-foreground'
+                            : 'text-white'
+                        }`}
+                      >
+                        <SelectValue
+                          placeholder={t('form-services-placeholder')}
+                        />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
                       {services.map((h) => (
-                        <SelectItem key={h.title} value={h.title}>{h.title}</SelectItem>
+                        <SelectItem key={h.title} value={h.title}>
+                          {h.title}
+                        </SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
@@ -173,13 +202,13 @@ export function BookingForm({ lang }: { lang: 'uk' | 'en' | 'ru' }) {
                     <PopoverTrigger asChild>
                       <FormControl>
                         <Button
-                          variant={"outline"}
+                          variant={'outline'}
                           className={cn(
-                            "w-[300px] pl-3 text-left font-normal h-[41px]",
-                            !field.value && "text-muted-foreground"
+                            'h-[41px] w-[300px] pl-3 text-left font-normal',
+                            !field.value && 'text-muted-foreground',
                           )}
                         >
-                          {format(field.value, "PPP")}
+                          {format(field.value, 'PPP')}
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                         </Button>
                       </FormControl>
@@ -198,7 +227,7 @@ export function BookingForm({ lang }: { lang: 'uk' | 'en' | 'ru' }) {
               )}
             />
           </div>
-          <div className="flex items-center justify-between md:gap-10 gap-3 w-full flex-col md:flex-row">
+          <div className="flex w-full flex-col items-center justify-between gap-3 md:flex-row md:gap-10">
             <FormField
               control={form.control}
               name="address"
@@ -206,7 +235,11 @@ export function BookingForm({ lang }: { lang: 'uk' | 'en' | 'ru' }) {
                 <FormItem>
                   <FormLabel>{t('form-address')}</FormLabel>
                   <FormControl>
-                    <Input placeholder={t('form-address-placeholder')} {...field} className="w-[300px]" />
+                    <Input
+                      placeholder={t('form-address-placeholder')}
+                      {...field}
+                      className="w-[300px]"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -219,7 +252,11 @@ export function BookingForm({ lang }: { lang: 'uk' | 'en' | 'ru' }) {
                 <FormItem>
                   <FormLabel>{t('form-phone')}</FormLabel>
                   <FormControl>
-                    <Input placeholder={t('form-phone-placeholder')} {...field} className="w-[300px]" />
+                    <Input
+                      placeholder={t('form-phone-placeholder')}
+                      {...field}
+                      className="w-[300px]"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -233,15 +270,24 @@ export function BookingForm({ lang }: { lang: 'uk' | 'en' | 'ru' }) {
               <FormItem>
                 <FormLabel>{t('form-message')}</FormLabel>
                 <FormControl>
-                  <Input placeholder={t('form-message-placeholder')} {...field} className="w-full" />
+                  <Input
+                    placeholder={t('form-message-placeholder')}
+                    {...field}
+                    className="w-full"
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit" className="group-disabled:bg-gray-700 group-disabled:pointer-events-none">{t('form-submit')}</Button>
+          <Button
+            type="submit"
+            className="group-disabled:pointer-events-none group-disabled:bg-gray-700"
+          >
+            {t('form-submit')}
+          </Button>
         </fieldset>
       </form>
-    </Form >
+    </Form>
   )
 }
